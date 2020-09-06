@@ -52,7 +52,8 @@ Calculator.prototype.operatorClick = function(operator){
       this.multiply(this.runningTotal);
       break;
       case ('/'):
-      this.divide(this.runningTotal);
+        if (this.runningTotal === 0) { this.runningTotal = "ERROR: CAN NOT / 0"}
+        else { this.divide(this.runningTotal); }
       break;
     }
   }
