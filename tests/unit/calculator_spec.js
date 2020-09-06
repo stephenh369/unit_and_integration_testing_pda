@@ -12,8 +12,15 @@ describe('calculator', function () {
   })
 
   it('can add', function(){
-    calculator.add(2);
-    assert.equal(2, calculator.runningTotal)
+    calculator.previousTotal = 4;
+    calculator.add(1);
+    assert.equal(5, calculator.runningTotal);
+  })
+
+  it('can subtract', function(){
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    assert.equal(3, calculator.runningTotal);
   })
 
 });
