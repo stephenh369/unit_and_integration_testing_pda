@@ -42,4 +42,12 @@ describe('calculator', function () {
     assert.equal(123, calculator.runningTotal);
   })
 
+  it('can concatenate operations', function(){
+    calculator.numberClick(1) + 
+    calculator.operatorClick('+') +
+    calculator.numberClick(2) +
+    calculator.operatorClick('=');
+    assert.equal(3, calculator.runningTotal);
+  })
+
 });
