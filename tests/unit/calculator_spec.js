@@ -35,4 +35,11 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal);
   })
 
+  it('can concatenate numbers', function(){
+    calculator.numberClick(1) + 
+    calculator.numberClick(2) +
+    calculator.numberClick(3);
+    assert.equal(123, calculator.runningTotal);
+  })
+
 });
