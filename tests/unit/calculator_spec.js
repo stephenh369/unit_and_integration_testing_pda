@@ -36,26 +36,26 @@ describe('calculator', function () {
   })
 
   it('can concatenate numbers', function(){
-    calculator.numberClick(1) + 
-    calculator.numberClick(2) +
+    calculator.numberClick(1);
+    calculator.numberClick(2);
     calculator.numberClick(3);
     assert.equal(123, calculator.runningTotal);
   })
 
   it('can concatenate operations', function(){
-    calculator.numberClick(1) + 
-    calculator.operatorClick('+') +
-    calculator.numberClick(2) +
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
     calculator.operatorClick('=');
     assert.equal(3, calculator.runningTotal);
   })
 
   it('can clear click without affecting calculation', function(){
-    calculator.numberClick(1) + 
-    calculator.operatorClick('+') +
-    calculator.numberClick(1) + 
-    calculator.clearClick() +
-    calculator.numberClick(2) +
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(1);
+    calculator.clearClick();
+    calculator.numberClick(2);
     calculator.operatorClick('=');
     assert.equal(3, calculator.runningTotal);
   })
